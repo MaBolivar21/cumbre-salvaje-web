@@ -30,7 +30,7 @@ footer{background:#091c16;color:#fff;padding:58px 6vw;display:grid;grid-template
  .experience-grid{padding:0 14px 82px;grid-template-columns:1fr;grid-template-rows:510px 390px 390px 390px}.card-a{grid-row:auto}.card-copy{left:24px;right:24px}.card-copy h3{font-size:31px}
  .zipline-cinema{height:520px;margin:0 14px 82px}.zipline-cinema-copy{left:22px;right:22px;bottom:32px}.zipline-cinema-copy h2{font-size:clamp(42px,12vw,58px);margin:10px 0 22px}.zipline-cinema-copy .btn{width:100%}
  .go-explainer{padding:82px 22px}.steps{grid-template-columns:1fr;margin:34px 0 28px}.step{padding:24px}
- .nature{padding:82px 20px}.nature-grid{height:600px;margin-top:24px}.nature-video{width:100%;max-width:520px}.herpetario{margin:0}
+ .nature{padding:82px 20px}.nature-grid{height:auto;aspect-ratio:9/16;width:100%;max-width:520px;margin:24px auto 0}.nature-video{width:100%;height:100%;max-width:none;object-fit:cover}.herpetario{margin:0}
  .groups-media{min-height:430px}.groups-content{padding:80px 22px}
  .wall{padding:82px 14px}.wall-grid{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:360px 260px 260px}.wall-1{grid-row:1;grid-column:1/3}.wall-4{grid-column:1/3}
  .trust-strip{grid-template-columns:1fr}.trust-strip>div{padding:26px 22px}.final-cta{padding:92px 22px}footer{grid-template-columns:1fr}
