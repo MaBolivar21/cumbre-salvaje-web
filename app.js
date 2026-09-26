@@ -44,3 +44,28 @@ document.querySelectorAll('a.go-link').forEach(a=>{
     try{window.fbq&&fbq('trackCustom','OpenCumbreGO',{cta:cta||'unknown'})}catch(_){}
   });
 });
+
+const motionVideos=document.querySelectorAll('video.card-video,video[data-cinematic-video]');
+if(motionVideos.length){
+  const reduceMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  if(reduceMotion){
+    motionVideos.forEach(video=>{
+      video.pause();
+      video.removeAttribute('autoplay');
+    });
+  }else if('IntersectionObserver' in window){
+    const videoObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        const video=entry.target;
+        if(entry.isIntersecting){
+          video.play().catch(()=>{});
+        }else{
+          video.pause();
+        }
+      });
+    },{rootMargin:'160px 0px',threshold:.15});
+    motionVideos.forEach(video=>videoObserver.observe(video));
+  }else{
+    motionVideos.forEach(video=>video.play().catch(()=>{}));
+  }
+}
